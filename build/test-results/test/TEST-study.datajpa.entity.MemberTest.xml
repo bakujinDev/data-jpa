@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="study.datajpa.entity.MemberTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-10-10T00:33:44" hostname="bui-MacBookPro.local" time="0.028">
+  <properties/>
+  <testcase name="testEntity()" classname="study.datajpa.entity.MemberTest" time="0.028"/>
+  <system-out><![CDATA[2023-10-10T09:33:44.484+09:00  INFO 50683 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [study.datajpa.entity.MemberTest]: MemberTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-10-10T09:33:44.486+09:00  INFO 50683 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration study.datajpa.DataJpaApplication for test class study.datajpa.entity.MemberTest
+2023-10-10T09:33:44.494+09:00 DEBUG 50683 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        next value for team_seq
+2023-10-10T09:33:44.495+09:00  INFO 50683 --- [    Test worker] p6spy                                    : #1696898024495 | took 0ms | statement | connection 4| url jdbc:h2:tcp://localhost/~/datajpa
+select next value for team_seq
+select next value for team_seq;
+2023-10-10T09:33:44.502+09:00 DEBUG 50683 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        next value for team_seq
+2023-10-10T09:33:44.503+09:00  INFO 50683 --- [    Test worker] p6spy                                    : #1696898024503 | took 0ms | statement | connection 4| url jdbc:h2:tcp://localhost/~/datajpa
+select next value for team_seq
+select next value for team_seq;
+2023-10-10T09:33:44.503+09:00 DEBUG 50683 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        next value for member_seq
+2023-10-10T09:33:44.503+09:00  INFO 50683 --- [    Test worker] p6spy                                    : #1696898024503 | took 0ms | statement | connection 4| url jdbc:h2:tcp://localhost/~/datajpa
+select next value for member_seq
+select next value for member_seq;
+2023-10-10T09:33:44.504+09:00 DEBUG 50683 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        next value for member_seq
+2023-10-10T09:33:44.504+09:00  INFO 50683 --- [    Test worker] p6spy                                    : #1696898024504 | took 0ms | statement | connection 4| url jdbc:h2:tcp://localhost/~/datajpa
+select next value for member_seq
+select next value for member_seq;
+2023-10-10T09:33:44.508+09:00 DEBUG 50683 --- [    Test worker] org.hibernate.SQL                        : 
+    insert 
+    into
+        team
+        (name,team_id) 
+    values
+        (?,?)
+2023-10-10T09:33:44.509+09:00  INFO 50683 --- [    Test worker] p6spy                                    : #1696898024509 | took 0ms | statement | connection 4| url jdbc:h2:tcp://localhost/~/datajpa
+insert into team (name,team_id) values (?,?)
+insert into team (name,team_id) values ('teamA',1);
+2023-10-10T09:33:44.510+09:00 DEBUG 50683 --- [    Test worker] org.hibernate.SQL                        : 
+    insert 
+    into
+        team
+        (name,team_id) 
+    values
+        (?,?)
+2023-10-10T09:33:44.510+09:00  INFO 50683 --- [    Test worker] p6spy                                    : #1696898024510 | took 0ms | statement | connection 4| url jdbc:h2:tcp://localhost/~/datajpa
+insert into team (name,team_id) values (?,?)
+insert into team (name,team_id) values ('teamB',2);
+2023-10-10T09:33:44.510+09:00 DEBUG 50683 --- [    Test worker] org.hibernate.SQL                        : 
+    insert 
+    into
+        member
+        (age,team_id,username,member_id) 
+    values
+        (?,?,?,?)
+2023-10-10T09:33:44.511+09:00  INFO 50683 --- [    Test worker] p6spy                                    : #1696898024511 | took 0ms | statement | connection 4| url jdbc:h2:tcp://localhost/~/datajpa
+insert into member (age,team_id,username,member_id) values (?,?,?,?)
+insert into member (age,team_id,username,member_id) values (10,1,'member1',1);
+2023-10-10T09:33:44.511+09:00 DEBUG 50683 --- [    Test worker] org.hibernate.SQL                        : 
+    insert 
+    into
+        member
+        (age,team_id,username,member_id) 
+    values
+        (?,?,?,?)
+2023-10-10T09:33:44.511+09:00  INFO 50683 --- [    Test worker] p6spy                                    : #1696898024511 | took 0ms | statement | connection 4| url jdbc:h2:tcp://localhost/~/datajpa
+insert into member (age,team_id,username,member_id) values (?,?,?,?)
+insert into member (age,team_id,username,member_id) values (20,1,'member2',2);
+2023-10-10T09:33:44.511+09:00 DEBUG 50683 --- [    Test worker] org.hibernate.SQL                        : 
+    insert 
+    into
+        member
+        (age,team_id,username,member_id) 
+    values
+        (?,?,?,?)
+2023-10-10T09:33:44.511+09:00  INFO 50683 --- [    Test worker] p6spy                                    : #1696898024511 | took 0ms | statement | connection 4| url jdbc:h2:tcp://localhost/~/datajpa
+insert into member (age,team_id,username,member_id) values (?,?,?,?)
+insert into member (age,team_id,username,member_id) values (30,2,'member3',3);
+2023-10-10T09:33:44.511+09:00 DEBUG 50683 --- [    Test worker] org.hibernate.SQL                        : 
+    insert 
+    into
+        member
+        (age,team_id,username,member_id) 
+    values
+        (?,?,?,?)
+2023-10-10T09:33:44.512+09:00  INFO 50683 --- [    Test worker] p6spy                                    : #1696898024512 | took 0ms | statement | connection 4| url jdbc:h2:tcp://localhost/~/datajpa
+insert into member (age,team_id,username,member_id) values (?,?,?,?)
+insert into member (age,team_id,username,member_id) values (40,2,'member4',4);
+2023-10-10T09:33:44.515+09:00  INFO 50683 --- [    Test worker] p6spy                                    : #1696898024515 | took 1ms | rollback | connection 4| url jdbc:h2:tcp://localhost/~/datajpa
+
+;
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

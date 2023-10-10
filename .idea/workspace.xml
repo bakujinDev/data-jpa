@@ -4,7 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14b3b6db-9658-4bcc-a917-95cafd61b6f4" name="Changes" comment="" />
+    <list default="true" id="14b3b6db-9658-4bcc-a917-95cafd61b6f4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/study/datajpa/entity/Team.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/study/datajpa/entity/MemberTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/study/datajpa/DataJpaApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/study/datajpa/entity/Member.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/study/datajpa/repository/MemberJpaRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/study/datajpa/repository/MemberRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/study/datajpa/DataJpaApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/study/datajpa/DataJpaApplicationTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/study/datajpa/repository/MemberJpaRepositoryTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/study/datajpa/repository/MemberJpaRepositoryTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/study/datajpa/repository/MemberRepositoryTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/study/datajpa/repository/MemberRepositoryTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/study/datajpa/entity/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/study/datajpa/entity/Member.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,8 +51,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
         <option value="JUnit5 Test Class" />
       </list>
     </option>
@@ -49,22 +67,26 @@
   "associatedIndex": 6
 }]]></component>
   <component name="ProjectId" id="2WWbcxEO5Ud6gGXv1ct1sBi9UFI" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "main",
     "last_opened_file_path": "/Users/q/Documents/GitHub/data-jpa",
-    "project.structure.last.edited": "Project",
+    "project.structure.last.edited": "SDKs",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "editing.templates"
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -72,10 +94,11 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="study.datajpa.entity" />
       <recent name="study.datajpa.repository" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MemberRepositoryTest.testMember">
+  <component name="RunManager" selected="Gradle.data-jpa [build]">
     <configuration name="DataJpaApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="study.datajpa.DataJpaApplication" />
       <module name="data-jpa.main" />
@@ -167,8 +190,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.MemberRepositoryTest.testMember" />
         <item itemvalue="Gradle.data-jpa [build]" />
+        <item itemvalue="JUnit.MemberRepositoryTest.testMember" />
         <item itemvalue="Gradle.data-jpa [clean]" />
         <item itemvalue="JUnit.MemberJpaRepositoryTest.testMember" />
         <item itemvalue="Application.DataJpaApplication" />
@@ -186,8 +209,16 @@
     </task>
     <servers />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
+    <expand>
+      <path>
+        <item name="data-jpa" type="b2602c69:ProjectViewProjectNode" />
+        <item name="dir{file:///Users/q/Documents/GitHub/data-jpa}" type="462c0819:PsiDirectoryNode" />
+      </path>
+    </expand>
     <select />
   </component>
 </project>

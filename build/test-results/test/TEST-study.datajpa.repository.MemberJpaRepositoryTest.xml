@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="study.datajpa.repository.MemberJpaRepositoryTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-10-10T00:33:44" hostname="bui-MacBookPro.local" time="0.006">
+  <properties/>
+  <testcase name="testMember()" classname="study.datajpa.repository.MemberJpaRepositoryTest" time="0.006"/>
+  <system-out><![CDATA[2023-10-10T09:33:44.517+09:00  INFO 50683 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [study.datajpa.repository.MemberJpaRepositoryTest]: MemberJpaRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-10-10T09:33:44.519+09:00  INFO 50683 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration study.datajpa.DataJpaApplication for test class study.datajpa.repository.MemberJpaRepositoryTest
+2023-10-10T09:33:44.526+09:00  INFO 50683 --- [    Test worker] p6spy                                    : #1696898024526 | took 0ms | rollback | connection 5| url jdbc:h2:tcp://localhost/~/datajpa
+
+;
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
