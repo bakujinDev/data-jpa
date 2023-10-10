@@ -1,10 +1,13 @@
 package study.datajpa.entity;
 
+import com.querydsl.jpa.impl.JPAQueryFactory;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -14,8 +17,12 @@ class MemberTest {
     @PersistenceContext
     EntityManager em;
 
+
     @Test
     public void testEntity() {
+        JPAQueryFactory query= new JPAQueryFactory(em);
+        QMember qMember = QMember.member;
+        
         Team teamA = new Team("teamA");
         Team teamB = new Team("teamB");
         em.persist(teamA);
@@ -37,5 +44,13 @@ class MemberTest {
 
         //확인
 //        em.createQuery()
+
+
+        List<Member> members = query.selectFrom(qMember).fetch();
+
+        for (Member member : members) {
+            System.out.println("member = " + member);
+            System.out.println("member = " + member.getTeam());
+        }
     }
 }
