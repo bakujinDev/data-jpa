@@ -1,5 +1,6 @@
 package study.datajpa.repository;
 
+import com.querydsl.core.types.dsl.BooleanExpression;
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
@@ -14,7 +15,6 @@ import java.util.Optional;
 public class MemberJpaRepository {
     @PersistenceContext
     private EntityManager em;
-
 
 
     QMember qMember = QMember.member;
@@ -50,5 +50,59 @@ public class MemberJpaRepository {
 
     public Member find(Long id) {
         return em.find(Member.class, id);
+    }
+
+    public List<Member> findByUsernameAndAgeGreaterThen(String username, int age) {
+        JPAQueryFactory query = new JPAQueryFactory(em);
+
+        return query
+                .selectFrom(qMember)
+                .where(
+                        usernameEq(username),
+                        ageGreater(age)
+                ).fetch();
+    }
+
+    private BooleanExpression usernameEq(String username) {
+        if (username == null) {
+            return null;
+        }
+        return qMember.username.eq(username);
+    }
+
+    private BooleanExpression ageGreater(int age) {
+        return qMember.age.gt(age);
+    }
+
+    public List<Member> findByPage(int age, int offset, int limit) {
+        JPAQueryFactory query = new JPAQueryFactory(em);
+
+        return query
+                .selectFrom(qMember)
+                .where(ageGreater(age))
+                .orderBy(qMember.username.desc())
+                .offset(offset)
+                .limit(limit)
+                .fetch();
+    }
+
+    public long totalCount(int age) {
+        JPAQueryFactory query = new JPAQueryFactory(em);
+
+        return query
+                .select(qMember.count())
+                .from(qMember)
+                .where(ageGreater(age))
+                .fetchOne();
+    }
+
+    public long bulkAgePlus(int age){
+        JPAQueryFactory query = new JPAQueryFactory(em);
+
+        return query
+                .update(qMember)
+                .set(qMember.age, qMember.age.add(1))
+                .where(qMember.age.goe(age))
+                .execute();
     }
 }

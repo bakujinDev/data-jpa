@@ -5,9 +5,11 @@ import jakarta.persistence.EntityManager;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.annotation.Rollback;
 import org.springframework.transaction.annotation.Transactional;
 import study.datajpa.entity.Member;
 import study.datajpa.entity.QMember;
+import study.datajpa.entity.Team;
 
 import java.util.List;
 
@@ -18,6 +20,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class MemberJpaRepositoryTest {
     @Autowired
     MemberJpaRepository memberJpaRepository;
+
 
     @Test
     public void testMember() {
@@ -53,5 +56,54 @@ class MemberJpaRepositoryTest {
         memberJpaRepository.delete(member2);
         long deletedCount = memberJpaRepository.count();
         assertEquals(deletedCount, 0);
+    }
+
+    @Test
+    public  void findByUsernameAndAgeGreaterThen(){
+        Member m1 = new Member("AAA", 10);
+        Member m2 = new Member("AAA", 20);
+        memberJpaRepository.save(m1);
+        memberJpaRepository.save(m2);
+
+        List<Member> result = memberJpaRepository.findByUsernameAndAgeGreaterThen("AAA", 15);
+
+        assertEquals(result.get(0).getUsername(),"AAA");
+        assertEquals(result.get(0).getAge(),20);
+        assertEquals(result.size(),1);
+    }
+
+    @Test
+    public  void getCount(){
+        memberJpaRepository.save(new Member("member1", 10));
+        memberJpaRepository.save(new Member("member2", 20));
+        memberJpaRepository.save(new Member("member3", 30));
+        memberJpaRepository.save(new Member("member4", 40));
+        memberJpaRepository.save(new Member("member5", 50));
+
+        List<Member> members = memberJpaRepository.findByPage(9, 0, 3);
+        long totalCount = memberJpaRepository.totalCount(9);
+
+        System.out.println("members = " + members);
+        System.out.println("totalCount = " + totalCount);
+
+        assertEquals(members.size(),3);
+        assertEquals(totalCount,5);
+    }
+
+
+    @Test
+    public  void bulkUpdate(){
+        //given
+        memberJpaRepository.save(new Member("member1", 10));
+        memberJpaRepository.save(new Member("member2", 20));
+        memberJpaRepository.save(new Member("member3", 30));
+        memberJpaRepository.save(new Member("member4", 40));
+        memberJpaRepository.save(new Member("member5", 50));
+
+        //when
+        long resultCount = memberJpaRepository.bulkAgePlus(20);
+
+        //then
+        assertEquals(resultCount,4);
     }
 }
